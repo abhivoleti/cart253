@@ -26,7 +26,7 @@ function draw() {
 
 
 fill("#895072ff");
-    triangle(200, 400, 300, 420, 300, 150);
+    triangle(200, 400, 10, 420, 300, 250);
 
     fill("#ff7300ff");
     ellipse(120, 120, 80, 80);
