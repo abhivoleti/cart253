@@ -20,17 +20,17 @@ let img;
 // Load the image.
 function preload() {
 
-  img = loadImage('./assets/soccerground.jpg');
+  img = loadImage('./assets/images/gbp.jpg');
 }
 
 function setup() {
 
-createCanvas(100, 100);
+createCanvas(2000, 3000);
 
-  background(50);
+  background(0);
 
   // Draw the image.
-  image(img, 0, 0);
+  image(img, 500, 1180);
 
   describe('An image of the underside of a white umbrella with a gridded ceiling above.');
 }
