@@ -1,24 +1,46 @@
 /**
- * Title of Project
- * Author Name
+ * Orlando Oysters
+ * Abhinav Voleti
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * 
+ *
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * 
 */
-function setup() {
+
+function preload() {
 
 }
+let img;
+
+// Load the image.
+function preload() {
+
+  img = loadImage('./assets/soccerground.jpg');
+}
+
+function setup() {
+
+createCanvas(100, 100);
+
+  background(50);
+
+  // Draw the image.
+  image(img, 0, 0);
+
+  describe('An image of the underside of a white umbrella with a gridded ceiling above.');
+}
+
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * 
 */
-function draw() {
 
-}
+
+
+  
