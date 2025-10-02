@@ -1,8 +1,25 @@
+/**
+ * orlando oysters
+ * Abhinav Voleti
+ * 
+ * Thats me as a house;stargazing while one of my favorite songs plays in the background. This the closest i feel to home.
+ */
 
+"use strict";
+
+/**
+ * There's a ufo which follows the mouse
+ * A shooting star bouncing off the screen
+ * Thats me staring at them
+ */
 let starX, starY;
 let starSpeedX = 9;
 let starSpeedY = 2;
 
+let settingsun;
+function preload() {
+  settingsun = loadSound('assets/sounds/settingsun.mp3');
+}
 function setup() {
   createCanvas(480, 480);
   background(0);
@@ -10,6 +27,10 @@ function setup() {
   // shooting star pos
   starX = 50;
   starY = 80;
+
+  //let the music play
+  settingsun.setVolume(0.03);
+  settingsun.play();
 }
 
 function draw() {
