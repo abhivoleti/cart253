@@ -1,4 +1,7 @@
 
+let starX, starY;
+let starSpeedX = 9;
+let starSpeedY = 2;
 
 function setup() {
   createCanvas(480, 480);
@@ -63,11 +66,29 @@ function draw() {
   ellipse(270, 430, 15, 18);
 
 
-  // shooting star
+  // ufo
   fill(255);
   ellipse(mouseX, mouseY, 70, 10);
 
   fill(255);
   ellipse(mouseX, mouseY-5, 45, 20);
 
+  // shooting star
+  fill(267);
+  ellipse(starX, starY, 12, 2);
+
+  starX += starSpeedX;
+  starY += starSpeedY;
+
+  if (starX > width || starY > height) {
+    starSpeedX = -starSpeedX;
+    starSpeedY = -starSpeedY;
+  }
+
+  if (starSpeedX < 0 && (starX <0 || starY <0)) {
+    starSpeedX = 0;
+    starSpeedY = 0;
+    starX = -100;
+    starY
+  }
 }
