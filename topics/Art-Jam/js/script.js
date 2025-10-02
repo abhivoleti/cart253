@@ -30,7 +30,11 @@ function setup() {
 
   //let the music play
   settingsun.setVolume(0.03);
-  settingsun.play();
+  userStartAudio().then(() => {
+    settingsun.play();
+
+  // click anywhere to start the music
+  });
 }
 
 function draw() {
