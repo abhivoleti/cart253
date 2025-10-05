@@ -18,6 +18,37 @@ let gameOver = false;
  */
 function setup() {
   createCanvas(400, 400);
+
+  window.addEventListener("mousePressed", (event)   => {
+    gameOver = true;
+  });
+  window.addEventListener("keyPressed", (event) => {
+    gameOver = true;
+  });
+  window.addEventListener("mouseReleased", (event) => {
+    gameOver = true;
+  });
+  window.addEventListener("mouseWheel", (event) => {
+    gameOver = true;
+  });   
+  window.addEventListener("mouseMoved", (event) => {
+    gameOver = true;
+  });   
+
+  window.addEventListener('offline', (event) => {
+    gameOver = true;
+  });
+  
+  window.addEventListener('online', (event) => {
+    gameOver = true;
+  });
+
+  document.addEventListener('visibilitychange', () =>{
+    if (document.hidden){
+      gameOver=true;
+
+    }
+    });
 }
 
 /**
@@ -61,37 +92,23 @@ function displayScore() {
   pop();
 }
 
-function mousePressed() {
-    if (!gameOver) {
-        gameOver = true;
-    }
-}
-
 function keyPressed() {
-    if (!gameOver) {
-        gameOver = true;
-    }
+    lose();
 }
 
-function mouseReleased() {
-    if (!gameOver) {
-        gameOver = true;
-    }
+function mousePressed() {
+    lose();
 }
 
-function mouseWheel() {
-    if (!gameOver) {
-        gameOver = true;
-    }
+function keyReleased() {
+    lose();
 }
 
 function mouseMoved() {
-    if (!gameOver) {
-        gameOver = true;
-    }
+    lose();
 }
-if (navigator.onLine) {
-  console.log("User is currently online.");
-} else {
-  console.log("User is currently offline.");
+
+function lose() {
+    gameOver = true
 }
+
